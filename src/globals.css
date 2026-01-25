@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 75 48% 90%; /* #eaf2d7 */
+    --foreground: 339 65% 30%; /* Darker shade of primary for text */
+
+    --card: 320 50% 94%; /* #efcfe3 */
+    --card-foreground: 339 65% 30%;
+
+    --popover: 320 50% 94%;
+    --popover-foreground: 339 65% 30%;
+
+    --primary: 339 65% 67%; /* #e27396 */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 339 60% 76%; /* #ea9ab2 */
+    --secondary-foreground: 339 65% 30%;
+
+    --muted: 320 50% 94%; /* #efcfe3 */
+    --muted-foreground: 339 65% 45%;
+
+    --accent: 186 49% 79%; /* #b3dee2 */
+    --accent-foreground: 339 65% 30%;
+
+    --destructive: 0 84.2% 60.2%; /* Keeping default red for destructive actions */
+    --destructive-foreground: 210 40% 98%; /* White */
+
+    --border: 186 49% 79%; /* #b3dee2 */
+    --input: 186 49% 79%;
+    --ring: 339 65% 67%; /* #e27396 */
+
+    --radius: 0.75rem;
+  }
+
+  /* Removing dark mode block as it's not specified and the palette is light */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8e6e6' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}

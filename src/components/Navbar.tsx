@@ -1,0 +1,68 @@
+"use client";
+
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children: React.ReactNode;
+  href: string;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ children, href, className, ...props }) => (
+  <a
+    href={href}
+    className={cn(
+      "text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full",
+      "hover:bg-muted", // Added a subtle background on hover
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </a>
+);
+
+const Navbar: React.FC = () => {
+  return (
+    <nav className="sticky top-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg rounded-b-2xl p-4 border-b border-border">
+      <div className="container mx-auto flex items-center justify-between">
+        <a href="#" className="text-2xl font-bold text-primary hover:text-primary/90 transition-colors duration-200 ease-in-out">
+          My Portfolio
+        </a>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-6">
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Menu className="h-6 w-6 text-primary" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[250px] sm:w-[300px] bg-gradient-to-b from-background to-card p-6 rounded-l-2xl">
+              <div className="flex flex-col space-y-6 pt-8">
+                <NavLink href="#about" className="text-xl text-foreground hover:text-primary">About</NavLink>
+                <NavLink href="#skills" className="text-xl text-foreground hover:text-primary">Skills</NavLink>
+                <NavLink href="#projects" className="text-xl text-foreground hover:text-primary">Projects</NavLink>
+                <NavLink href="#contact" className="text-xl text-foreground hover:text-primary">Contact</NavLink>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
