@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -44,10 +44,17 @@ const projects = [
 ];
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background to-card">
       <Navbar />
       <main className="flex-grow flex flex-col items-center p-4 sm:p-8 w-full max-w-5xl mx-auto bg-pattern">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground mb-10 text-center animate-fadeIn">
+          My Projects
+        </h1>
         <ProjectsSection projects={projects} />
       </main>
       <Footer />
