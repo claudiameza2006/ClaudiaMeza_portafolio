@@ -10,6 +10,7 @@ const messages = [
   "Connecting to Claudia's network...",
   "Connection established.",
   "Ready to discuss your project or just say hello!",
+  "Hope you enjoy learning about me!", // Nuevo mensaje añadido aquí
   "user@portfolio:~$ _" // Blinking cursor placeholder
 ];
 
