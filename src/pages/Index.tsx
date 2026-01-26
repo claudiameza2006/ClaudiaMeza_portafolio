@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import CallToActionSection from "@/components/CallToActionSection";
+import TerminalCallToAction from "@/components/TerminalCallToAction"; // Importar el nuevo componente
 import CertificatesSection from "@/components/CertificatesSection";
 
 const Index = () => {
@@ -54,7 +54,7 @@ const Index = () => {
 
       <main className="flex-grow flex flex-col items-center p-4 sm:p-8 w-full max-w-5xl mx-auto bg-pattern">
         <HeroSection />
-        <CallToActionSection />
+        <TerminalCallToAction /> {/* Usando el nuevo componente */}
         
         <div id="about">
           <AboutSection />
