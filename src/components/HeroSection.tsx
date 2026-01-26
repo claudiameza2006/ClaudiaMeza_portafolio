@@ -3,7 +3,7 @@
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, FileText } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
@@ -11,9 +11,9 @@ const HeroSection: React.FC = () => {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background to-card opacity-50 rounded-2xl"></div>
       <div className="relative z-10 animate-fadeIn">
-        <Avatar className="w-36 h-36 mx-auto mb-6 border-4 border-primary shadow-lg ring-4 ring-secondary ring-offset-4 ring-offset-white">
-          <AvatarImage src="/placeholder.svg" alt="Your Profile Picture" /> {/* IMPORTANT: Replace with your actual image path, e.g., /images/your-photo.jpg */}
-          <AvatarFallback className="bg-muted text-primary text-5xl font-bold">JP</AvatarFallback>
+        <Avatar className="w-72 h-72 mx-auto mb-10 border-4 border-primary shadow-lg ring-4 ring-secondary ring-offset-4 ring-offset-white">
+          <AvatarImage src="/Claudia.jpeg" alt="Your Profile Picture" />
+          <AvatarFallback className="bg-muted text-primary text-7xl font-bold">CM</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground mb-4 leading-tight">
           Cybersecurity & Automation Engineer
@@ -32,9 +32,9 @@ const HeroSection: React.FC = () => {
               <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
             </a>
           </Button>
-          <Button asChild variant="outline" className="rounded-full px-6 py-3 border-primary text-primary hover:bg-muted hover:text-primary/90 text-lg font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
-            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-5 w-5" /> GitHub
+          <Button asChild variant="outline" className="rounded-full px-6 py-3 border-primary text-pink-400 hover:bg-muted hover:text-primary/90 text-lg font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
+            <a href="https://drive.google.com/file/d/1j7qQtN2ZlX-lYe0kZ34kqfVjc0k3HrNQ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-5 w-5" /> Resume ;3
             </a>
           </Button>
         </div>

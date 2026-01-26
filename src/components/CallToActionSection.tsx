@@ -20,7 +20,7 @@ const CallToActionSection: React.FC = () => {
             Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </Button>
-        <Button asChild variant="outline" className="w-full sm:w-auto rounded-full px-3 py-2 text-sm sm:px-6 sm:py-3 sm:text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
+        <Button asChild variant="outline" className="w-full sm:w-auto rounded-full px-3 py-2 text-sm sm:px-6 sm:py-3 sm:text-lg border-primary-foreground text-pink-400 hover:bg-primary-foreground hover:text-primary font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
           <a href="#projects">
             View My Work <ArrowRight className="ml-2 h-5 w-5" />
           </a>
