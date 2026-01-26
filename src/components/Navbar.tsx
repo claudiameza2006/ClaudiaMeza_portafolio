@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg rounded-b-2xl p-4 border-b border-border">
       <div className="container mx-auto flex items-center justify-between">
         <Link
-          to="/"
+          to="/" // Este enlace ya apunta a la página principal
           className="text-2xl font-bold text-primary hover:text-primary/90 transition-colors duration-200 ease-in-out"
         >
           My Portfolio
