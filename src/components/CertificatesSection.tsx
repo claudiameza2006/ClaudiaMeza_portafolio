@@ -1,4 +1,5 @@
 import React from 'react';
+import { Award } from 'lucide-react'; // Importando un icono para la sección de certificados
 
 interface Certificate {
   title: string;
@@ -14,8 +15,9 @@ interface CertificatesSectionProps {
 
 const CertificatesSection: React.FC<CertificatesSectionProps> = ({ certificates }) => {
   return (
-    <section className="w-full max-w-3xl mx-auto mt-12 p-8 bg-card rounded-2xl shadow-xl border border-border animate-fadeIn">
+    <section id="certificates" className="w-full max-w-3xl mx-auto mt-12 p-8 bg-card rounded-2xl shadow-xl border border-border animate-fadeIn hover:shadow-2xl transition-shadow duration-300">
       <div className="flex items-center justify-center mb-8">
+        <Award className="h-8 w-8 text-primary mr-3" /> {/* Icono para la sección */}
         <h3 className="text-3xl font-bold text-foreground">Certificates</h3>
       </div>
       <div className="grid gap-8">
