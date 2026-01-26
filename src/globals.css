@@ -84,6 +84,6 @@
 }
 
 .bg-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h1v20H0zM0 0h20v1H0z' fill='%23c0d9db' fill-opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%2399b0b3' fill-opacity='0.1' d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 30V26h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 34v-4H8v4H4v2h4v4h2v-4h4v-2h-4zm0-30V0H8v4H4v2h4v4h2V6h4V4h-4zm0 30V26H8v4H4v2h4v4h2v-4h4v-2h-4zM36 58v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 58v-4H8v4H4v2h4v4h2v-4h4v-2h-4zM58 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM58 10V6h-2v4h-4v2h4v4h2V8h4V6h-4zm0 30V36h-2v4h-4v2h4v4h2v-4h4v-2h-4zM36 10V6h-2v4h-4v2h4v4h2V8h4V6h-4zM58 58v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM36 58v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 58v-4H8v4H4v2h4v4h2v-4h4v-2h-4z' fill='%2399b0b3' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
 }
