@@ -3,7 +3,6 @@
 import SkillsSection from "@/components/SkillsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
-import ProjectsSection from "@/components/ProjectsSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -17,45 +16,6 @@ const Index = () => {
     "Threat Detection", "Compliance Automation", "Cloud Security",
     "Network Security", "Incident Response", "Python", "Bash",
     "Linux", "AWS", "Azure", "Docker", "Kubernetes", "Git"
-  ];
-
-  const projects = [
-    {
-      title: "Network Traffic Analysis Dashboard (Python + Streamlit)",
-      overview: "Developed an interactive dashboard to analyze network traffic, detect anomalies, and visualize suspicious patterns for security teams.",
-      contributions: [
-        "Parsed and normalized log data using Python",
-        "Built interactive dashboards with Streamlit",
-        "Implemented anomaly detection logic",
-        "Designed visualizations to support threat analysis",
-      ],
-      tools: ["Python", "Streamlit", "Pandas", "Regex"],
-      demonstrates: ["Security analytics", "automation", "dashboard design"],
-    },
-    {
-      title: "CI/CD Compliance & Hardening Automation (B. Braun)",
-      overview: "Improved CI/CD reliability and security by automating backup workflows and remediating pipeline misconfigurations.",
-      contributions: [
-        "Automated secure backup workflows using Bash and BorgBackup",
-        "Reduced deployment vulnerabilities and attack surface by 25%",
-        "Authored risk and compliance documentation for audits",
-        "Strengthened system hardening and deployment reliability",
-      ],
-      tools: ["Jenkins", "GitHub", "Bash", "PowerShell"],
-      demonstrates: ["DevSecOps", "compliance", "automation"],
-    },
-    {
-      title: "Vulnerability Assessment & Firewall Log Analysis (Peru Internship)",
-      overview: "Conducted vulnerability assessments and analyzed firewall logs to identify threats and improve remediation workflows.",
-      contributions: [
-        "Performed Tenable vulnerability scans",
-        "Analyzed firewall logs for high‑priority threats",
-        "Monitored SIEM dashboards for anomalous activity",
-        "Prepared weekly compliance and threat intelligence reports",
-      ],
-      tools: ["Tenable", "Linux", "SIEM"],
-      demonstrates: ["Vulnerability management", "log analysis", "threat detection"],
-    },
   ];
 
   const certificates = [
@@ -85,9 +45,6 @@ const Index = () => {
         </div>
         <div id="skills">
           <SkillsSection skills={skills} />
-        </div>
-        <div id="projects">
-          <ProjectsSection projects={projects} />
         </div>
         <div id="certificates">
           <CertificatesSection certificates={certificates} />
