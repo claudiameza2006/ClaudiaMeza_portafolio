@@ -84,6 +84,6 @@
 }
 
 .bg-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2399b0b3' stroke-width='1' opacity='0.1'%3E%3Cpath d='M-10 10L50 -50M-10 30L50 -30M-10 50L50 -10M-10 70L50 10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: 40px 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h1v20H0zM0 0h20v1H0z' fill='%23c0d9db' fill-opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 20px 20px;
 }
