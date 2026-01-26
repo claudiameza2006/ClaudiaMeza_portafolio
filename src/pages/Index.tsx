@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useEffect } from 'react'; // Importar useEffect
+import { useLocation } from 'react-router-dom'; // Importar useLocation
 import SkillsSection from "@/components/SkillsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -31,6 +33,20 @@ const Index = () => {
       ]
     }
   ];
+
+  const location = useLocation(); // Obtener la ubicación actual
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1)); // Eliminar '#' del hash
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Si no hay hash, asegurar que la página se desplace al inicio
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.hash]); // Ejecutar este efecto cuando el hash de la URL cambie
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background to-card">
