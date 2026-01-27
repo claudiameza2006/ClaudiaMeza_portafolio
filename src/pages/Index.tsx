@@ -44,19 +44,6 @@ const Index = () => {
       demonstrates: ["DevSecOps", "compliance", "automation"],
     },
     {
-      title: "Performance Testing Automation Project – DoseTrac® Enterprise (DTE)",
-      overview: "Designed and implemented a custom performance test automation framework for the Reports module of the DoseTrac® Enterprise (DTE) web application.",
-      contributions: [
-        "Automated critical user workflows to improve testing efficiency, reliability, and consistency across application releases.",
-        "Utilized Gherkin for behavior-driven feature file design and TypeScript to manage data transitions and optimize click-path execution.",
-        "Developed automation scripts to validate data consistency, navigation flows, and UI rendering across multiple pages.",
-        "Created a robust safety net for new releases and code changes, enabling early detection of performance and data-related defects.",
-        "Improved software quality by identifying issues that could impact data accuracy, user experience, and system performance.",
-      ],
-      tools: ["TypeScript", "Gherkin", "Playwright", "Node.js"], // Asumiendo Playwright y Node.js para la automatización web con TypeScript
-      demonstrates: ["Test automation", "performance testing", "web application testing", "DevOps"],
-    },
-    {
       title: "Vulnerability Assessment & Firewall Log Analysis (Peru Internship)",
       overview: "Conducted vulnerability assessments and analyzed firewall logs to identify threats and improve remediation workflows.",
       contributions: [
