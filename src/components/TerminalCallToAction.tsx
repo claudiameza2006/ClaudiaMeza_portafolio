@@ -4,13 +4,14 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquareText } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom"; // Importar Link
 
 const messages = [
   "user@portfolio:~$ connect --now",
   "Connecting to Claudia's network...",
   "Connection established.",
   "Ready to discuss your project or just say hello!",
-  "Hope you enjoy learning about me!", // Nuevo mensaje añadido aquí
+  "Hope you enjoy learning about me!",
   "user@portfolio:~$ _" // Blinking cursor placeholder
 ];
 
@@ -83,9 +84,9 @@ const TerminalCallToAction: React.FC = () => {
             </a>
           </Button>
           <Button asChild variant="outline" className="w-full sm:w-auto rounded-full px-3 py-2 text-sm sm:px-6 sm:py-3 sm:text-lg border-primary text-primary hover:bg-primary hover:text-white font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
-            <a href="#projects">
+            <Link to="/projects"> {/* Cambiado de <a> a Link y href a to */}
               View My Work <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
