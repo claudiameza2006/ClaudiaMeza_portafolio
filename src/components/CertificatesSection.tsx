@@ -22,7 +22,13 @@ const CertificatesSection: React.FC<CertificatesSectionProps> = ({ certificates 
       </div>
       <div className="grid gap-8">
         {/* Ordeno los certificados personalizados en orden alfabético por título */}
-        {["AIG Shields Up: Cybersecurity on Forage", "Deloitte Australia Cyber Job Simulation on Forage", "Mastercard Cybersecurity Certificate", "Tata Cybersecurity Analyst on Forage"].map(title => {
+        {[
+          "AIG Shields Up: Cybersecurity on Forage",
+          "Cisco Networking Academy – Introduction to Cybersecurity", // Nuevo certificado
+          "Deloitte Australia Cyber Job Simulation on Forage",
+          "Mastercard Cybersecurity Certificate",
+          "Tata Cybersecurity Analyst on Forage"
+        ].map(title => {
           const certs = [
             {
               title: "AIG Shields Up: Cybersecurity on Forage",
@@ -43,6 +49,23 @@ const CertificatesSection: React.FC<CertificatesSectionProps> = ({ certificates 
                 "VULNERABILITY MANAGEMENT"
               ],
               icon: "https://cdn.sanity.io/images/mz2hls6g/production/8945461f0709009fdcad9a72a6727012c79ec8d7-1000x1000.png?w=1600&q=75&fit=clip&auto=format"
+            },
+            {
+              title: "Cisco Networking Academy – Introduction to Cybersecurity",
+              institution: "Cisco Networking Academy",
+              date: "August 2024", // Fecha estimada
+              link: "https://www.credly.com/badges/10223b54-61e3-459e-abf4-685b05241448/linked_in_profile",
+              description: [
+                "Verified completion of cybersecurity fundamentals, including network security, threat detection, and risk awareness.",
+                "Earned Course Final Exam Badge, demonstrating practical understanding of core cybersecurity concepts."
+              ],
+              skills: [
+                "CYBERSECURITY FUNDAMENTALS",
+                "NETWORK SECURITY",
+                "THREAT DETECTION",
+                "RISK AWARENESS"
+              ],
+              icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png"
             },
             {
               title: "Deloitte Australia Cyber Job Simulation on Forage",
