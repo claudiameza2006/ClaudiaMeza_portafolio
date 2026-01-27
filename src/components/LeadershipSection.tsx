@@ -30,10 +30,33 @@ const LeadershipSection: React.FC = () => {
             <CardTitle className="text-2xl font-semibold text-primary">CyberWolves | Vice President</CardTitle>
             <span className="text-lg text-foreground font-semibold">May 2025 - Present</span>
           </CardHeader>
+          <CardContent className="space-y-4 flex flex-row items-center gap-6">
+            <a
+              href="https://www.instagram.com/cyberwolves_au/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0"
+            >
+              <img src="cyberwolves.jpeg" alt="CyberWolves Instagram" className="w-24 h-24 object-cover rounded shadow hover:scale-105 transition-transform duration-200" />
+            </a>
+            <div>
+              <ul className="list-disc list-inside text-foreground space-y-1 pl-4">
+                <li>Led a team of 11 members, organizing collaborative meetings, workshops, and fundraising initiatives.</li>
+                <li>Supported cybersecurity skill development, certification attainment, and access to career opportunities and career fairs.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="rounded-xl shadow-lg border-border bg-card hover:shadow-2xl transition-shadow duration-300 ease-in-out mt-8">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-2xl font-semibold text-primary">Esports Team Member – Valorant, Alvernia University</CardTitle>
+            <span className="text-lg text-foreground font-semibold">2024 - Present</span>
+          </CardHeader>
           <CardContent className="space-y-4">
             <ul className="list-disc list-inside text-foreground space-y-1 pl-4">
-              <li>Led a team of 11 members, organizing collaborative meetings, workshops, and fundraising initiatives.</li>
-              <li>Supported cybersecurity skill development, certification attainment, and access to career opportunities and career fairs.</li>
+              <li>Collaborated with team members to organize and compete in esports tournaments.</li>
+              <li>Assisted in planning and executing a charity event to raise funds for children, demonstrating initiative and community involvement.</li>
+              <li>Developed teamwork, strategic thinking, and event coordination skills.</li>
             </ul>
           </CardContent>
         </Card>
