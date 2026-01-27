@@ -42,7 +42,7 @@ const experiences = [
   {
     title: "Computer Science Tutor / Academic Support",
     company: "Alvernia University",
-    date: "Sept 2024 - Present", // Fechas actualizadas
+    date: "Fechas a añadir", // Marcador de posición para las fechas
     location: "Reading, PA",
     bullets: [
       "Provided structured academic support in Computer Science courses, such as Introduction to Programming and Data Structures.",
