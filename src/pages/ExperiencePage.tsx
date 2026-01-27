@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"; // Importar Card components
+import { Briefcase } from "lucide-react"; // Importar icono de Briefcase
 
 const experiences = [
   {
@@ -44,28 +46,31 @@ const Experience = () => {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background to-card">
       <Navbar />
       <main className="flex-grow flex flex-col items-center p-4 sm:p-8 w-full max-w-5xl mx-auto bg-pattern">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground mb-10 text-center animate-fadeIn">
-          Technology Experience
-        </h1>
-        <section className="w-full max-w-5xl mx-auto grid gap-8 py-8">
+        <div className="flex items-center justify-center mb-10 animate-fadeIn">
+          <Briefcase className="h-10 w-10 text-primary mr-4" /> {/* Icono para la sección */}
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground text-center">
+            Technology Experience
+          </h1>
+        </div>
+        <section className="w-full max-w-3xl mx-auto grid gap-8 py-8">
           {experiences.map((exp, idx) => (
-            <div key={idx} className="bg-white/80 rounded-2xl shadow-lg border border-primary p-8 flex flex-col gap-4">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
-                <div>
-                  <h3 className="text-2xl font-bold text-primary">{exp.title}</h3>
-                  <span className="text-base text-foreground font-semibold">{exp.company}</span>
-                </div>
-                <div className="text-sm text-muted-foreground text-right">
+            <Card key={idx} className="rounded-2xl shadow-xl border border-border bg-card animate-fadeIn hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-bold text-primary">{exp.title}</CardTitle>
+                <span className="text-lg text-foreground font-semibold">{exp.company}</span>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex justify-between items-center text-sm text-muted-foreground mb-4">
                   <div>{exp.date}</div>
                   <div>{exp.location}</div>
                 </div>
-              </div>
-              <ul className="list-disc list-inside text-sm text-muted-foreground mb-2 pl-2">
-                {exp.bullets.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
+                <ul className="list-disc list-inside text-base text-foreground space-y-1 pl-4">
+                  {exp.bullets.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </section>
       </main>
