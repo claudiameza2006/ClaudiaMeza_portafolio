@@ -11,6 +11,7 @@ interface Project {
   contributions: string[];
   tools: string[];
   demonstrates: string[];
+  github?: string;
 }
 
 interface ProjectsSectionProps {
@@ -66,6 +67,16 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                     ))}
                   </div>
                 </div>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mt-4 px-5 py-2 bg-primary text-primary-foreground rounded-xl shadow hover:bg-primary/90 transition-colors text-base font-bold border-2 border-primary/70 text-center"
+                  >
+                    View on GitHub
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}

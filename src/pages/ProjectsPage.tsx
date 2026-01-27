@@ -54,6 +54,19 @@ const projects = [
     tools: ["Tenable", "Linux", "SIEM"],
     demonstrates: ["Vulnerability management", "log analysis", "threat detection"],
   },
+  {
+    title: "Rails of Peru – Train Travel Database",
+    overview: "Relational database simulating a train travel reservation system in Peru, managing customers, reservations, stations, routes, and pricing.",
+    contributions: [
+      "Database Design: ERD, primary & foreign keys, normalization",
+      "SQL Queries: JOINs, aggregates, and calculations for reservations and pricing",
+      "Data Population: 30+ rows per table, manually inserted",
+      "Version Control: GitHub"
+    ],
+    tools: ["PostgreSQL", "SQL", "pgAdmin"],
+    demonstrates: ["Database Design", "SQL", "Data Modeling"],
+    github: "https://github.com/claudiameza2006/DataBase-Project"
+  },
 ];
 
 const ProjectsPage = () => {
