@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"; // Importar Card components
-import { Briefcase } from "lucide-react"; // Importar icono de Briefcase
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
@@ -38,6 +38,17 @@ const experiences = [
       "Analyzed high-priority firewall logs and monitored SIEM dashboards for anomalous activity, enabling real-time threat detection, incident escalation, and faster response coordination.",
       "Prepared weekly compliance and threat intelligence reports, synthesizing monitoring findings, control checks, and emerging risk trends to support audit readiness and executive decision making."
     ]
+  },
+  {
+    title: "Computer Science Tutor / Academic Support",
+    company: "Alvernia University",
+    date: "Fechas a añadir", // Marcador de posición para las fechas
+    location: "Reading, PA",
+    bullets: [
+      "Provided structured academic support in Computer Science courses, such as Introduction to Programming and Data Structures.",
+      "Assisted students in strengthening programming fundamentals, problem-solving abilities, and analytical thinking.",
+      "Explained complex concepts clearly and effectively in a professional academic setting."
+    ]
   }
 ];
 
@@ -47,7 +58,7 @@ const Experience = () => {
       <Navbar />
       <main className="flex-grow flex flex-col items-center p-4 sm:p-8 w-full max-w-5xl mx-auto bg-pattern">
         <div className="flex items-center justify-center mb-10 animate-fadeIn">
-          <Briefcase className="h-10 w-10 text-primary mr-4" /> {/* Icono para la sección */}
+          <Briefcase className="h-10 w-10 text-primary mr-4" />
           <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground text-center">
             Technology Experience
           </h1>
