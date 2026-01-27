@@ -60,6 +60,12 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
+          <Link
+            to="/experience"
+            className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
+          >
+            Experience
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -102,6 +108,12 @@ const Navbar: React.FC = () => {
                   className="text-xl text-foreground hover:text-primary"
                 >
                   Contact
+                </Link>
+                <Link
+                  to="/experience"
+                  className="text-xl text-foreground hover:text-primary"
+                >
+                  Experience
                 </Link>
               </div>
             </SheetContent>
