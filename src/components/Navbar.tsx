@@ -36,6 +36,12 @@ const Navbar: React.FC = () => {
             About
           </Link>
           <Link
+            to="/#leadership" // New link for Leadership
+            className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
+          >
+            Leadership
+          </Link>
+          <Link
             to="/#skills"
             className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
           >
@@ -85,6 +91,12 @@ const Navbar: React.FC = () => {
                   className="text-xl text-foreground hover:text-primary"
                 >
                   About
+                </Link>
+                <Link
+                  to="/#leadership" // New link for Leadership
+                  className="text-xl text-foreground hover:text-primary"
+                >
+                  Leadership
                 </Link>
                 <Link
                   to="/#skills"
