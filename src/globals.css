@@ -35,7 +35,35 @@
     --radius: 0.75rem;
   }
 
-  /* Removing dark mode block as it's not specified and the palette is light */
+  .dark {
+    --background: 220 20% 10%; /* Dark blue-grey */
+    --foreground: 210 20% 90%; /* Light grey */
+
+    --card: 220 20% 15%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 20% 15%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 339 65% 75%; /* Lighter pink */
+    --primary-foreground: 0 0% 10%; /* Dark text on primary */
+
+    --secondary: 339 60% 80%; /* Lighter secondary pink */
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 186 49% 85%; /* Lighter accent blue */
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 339 65% 75%;
+  }
 }
 
 @layer base {
