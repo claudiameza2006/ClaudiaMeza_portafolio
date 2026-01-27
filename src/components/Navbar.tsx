@@ -3,17 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Link, useLocation } from "react-router-dom"; // Importar useLocation
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  const location = useLocation(); // Obtener la ubicación actual
+  const location = useLocation();
 
   const handleScrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      // Si no estamos en la página principal, navegamos a ella con el hash
       window.location.href = `/#${sectionId}`;
     } else {
-      // Si ya estamos en la página principal, solo hacemos scroll
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -22,7 +20,7 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg rounded-b-2xl p-4 border-b border-border">
       <div className="container mx-auto flex items-center justify-between">
         <Link
-          to="/" // Este enlace ya apunta a la página principal
+          to="/"
           className="text-2xl font-bold text-primary hover:text-primary/90 transition-colors duration-200 ease-in-out"
         >
           My Portfolio
@@ -49,7 +47,7 @@ const Navbar: React.FC = () => {
             Projects
           </Link>
           <Link
-            to="/#certificates"
+            to="/certificates"
             className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
           >
             Certificates
@@ -98,7 +96,7 @@ const Navbar: React.FC = () => {
                   Projects
                 </Link>
                 <Link
-                  to="/#certificates"
+                  to="/certificates"
                   className="text-xl text-foreground hover:text-primary"
                 >
                   Certificates
