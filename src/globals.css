@@ -7,7 +7,7 @@
     --background: 75 48% 90%; /* #eaf2d7 */
     --foreground: 339 65% 30%; /* Darker shade of primary for text */
 
-    --card: 320 50% 94%; /* #efcfe3 */
+    --card: 0 0% 100%; /* White for light mode */
     --card-foreground: 339 65% 30%;
 
     --popover: 320 50% 94%;
