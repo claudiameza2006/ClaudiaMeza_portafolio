@@ -11,7 +11,8 @@ import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import TerminalCallToAction from "@/components/TerminalCallToAction";
 import CallToActionSection from "@/components/CallToActionSection";
-import LeadershipSection from "@/components/LeadershipSection"; // Import the new component
+import LeadershipSection from "@/components/LeadershipSection";
+import AwardsSection from "@/components/AwardsSection"; // Import the new component
 
 const Index = () => {
   const skills = [
@@ -45,8 +46,11 @@ const Index = () => {
         <div id="about">
           <AboutSection />
         </div>
-        <div id="leadership"> {/* New section for leadership */}
+        <div id="leadership">
           <LeadershipSection />
+        </div>
+        <div id="awards"> {/* New section for awards */}
+          <AwardsSection />
         </div>
         <div id="skills">
           <SkillsSection skills={skills} />

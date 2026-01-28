@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
-import { ThemeToggle } from "@/components/ThemeToggle"; // Importar ThemeToggle
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6"> {/* Added items-center for alignment */}
+        <div className="hidden md:flex items-center space-x-6">
           <Link
             to="/#about"
             className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
@@ -36,10 +36,16 @@ const Navbar: React.FC = () => {
             About
           </Link>
           <Link
-            to="/#leadership" // New link for Leadership
+            to="/#leadership"
             className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
           >
             Leadership
+          </Link>
+          <Link
+            to="/#awards"
+            className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-200 ease-in-out px-4 py-2 rounded-full hover:bg-muted"
+          >
+            Awards
           </Link>
           <Link
             to="/#skills"
@@ -71,12 +77,12 @@ const Navbar: React.FC = () => {
           >
             Experience
           </Link>
-          <ThemeToggle /> {/* Añadir el ThemeToggle aquí */}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center"> {/* Added flex items-center for alignment */}
-          <ThemeToggle /> {/* Añadir el ThemeToggle también en móvil */}
+        <div className="md:hidden flex items-center">
+          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
@@ -93,10 +99,16 @@ const Navbar: React.FC = () => {
                   About
                 </Link>
                 <Link
-                  to="/#leadership" // New link for Leadership
+                  to="/#leadership"
                   className="text-xl text-foreground hover:text-primary"
                 >
                   Leadership
+                </Link>
+                <Link
+                  to="/#awards"
+                  className="text-xl text-foreground hover:text-primary"
+                >
+                  Awards
                 </Link>
                 <Link
                   to="/#skills"
