@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CertificatesSection from "@/components/CertificatesSection";
-import UpcomingCertificationsSection from "@/components/UpcomingCertificationsSection"; // Import new component
+import UpcomingCertificationsSection from "@/components/UpcomingCertificationsSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Award } from "lucide-react";
 
@@ -105,6 +105,18 @@ const certificates = [
 ];
 
 const upcomingCertificates = [
+  {
+    title: "Microsoft Cybersecurity Analyst Professional Scholarship",
+    expectedDate: "July 2025",
+    status: "Awarded - Program in Progress",
+    notes: "Selected among 1500+ recipients for a fully funded $6500 cybersecurity certification program (Women’s in Cybersecurity / Microsoft)."
+  },
+  {
+    title: "Google Career Certificate Scholarship",
+    expectedDate: "July 2025",
+    status: "Awarded - Program in Progress",
+    notes: "Awarded through NCRF for demonstrated commitment to cybersecurity education and hands-on training in threat detection, risk management, and security best practices (National College Resources Foundation (NCRF) / Google)."
+  },
   {
     title: "CompTIA Security+",
     expectedDate: "April 2026",
