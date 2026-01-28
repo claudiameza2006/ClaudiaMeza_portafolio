@@ -10,6 +10,7 @@ interface UpcomingCertificate {
   expectedDate: string;
   status: string; // e.g., "In Progress", "Studying"
   notes?: string; // Additional notes
+  icon?: string; // Optional icon URL
 }
 
 interface UpcomingCertificationsSectionProps {
@@ -30,7 +31,11 @@ const UpcomingCertificationsSection: React.FC<UpcomingCertificationsSectionProps
         {upcomingCertificates.map((cert, index) => (
           <Card key={index} className="p-6 rounded-xl border border-border bg-card shadow-lg flex flex-col sm:flex-row sm:items-center gap-6 hover:scale-[1.02] transition-transform duration-300">
             <div className="flex-shrink-0">
-              <BookOpen className="w-16 h-16 text-accent" /> {/* Generic icon for studying */}
+              {cert.icon ? (
+                <img src={cert.icon} alt={`${cert.title} Icon`} className="w-16 h-16 object-contain shadow-md bg-background p-2 rounded-lg" />
+              ) : (
+                <BookOpen className="w-16 h-16 text-accent" /> // Default icon if none provided
+              )}
             </div>
             <div className="flex-1">
               <h4 className="text-2xl font-bold text-primary mb-1">{cert.title}</h4>

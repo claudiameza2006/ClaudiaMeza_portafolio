@@ -109,19 +109,22 @@ const upcomingCertificates = [
     title: "Microsoft Cybersecurity Analyst Professional Scholarship",
     expectedDate: "July 2025",
     status: "Awarded - Program in Progress",
-    notes: "Selected among 1500+ recipients for a fully funded $6500 cybersecurity certification program (Women’s in Cybersecurity / Microsoft)."
+    notes: "Selected among 1500+ recipients for a fully funded $6500 cybersecurity certification program (Women’s in Cybersecurity / Microsoft).",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
   },
   {
     title: "Google Career Certificate Scholarship",
     expectedDate: "July 2025",
     status: "Awarded - Program in Progress",
-    notes: "Awarded through NCRF for demonstrated commitment to cybersecurity education and hands-on training in threat detection, risk management, and security best practices (National College Resources Foundation (NCRF) / Google)."
+    notes: "Awarded through NCRF for demonstrated commitment to cybersecurity education and hands-on training in threat detection, risk management, and security best practices (National College Resources Foundation (NCRF) / Google).",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
   },
   {
     title: "CompTIA Security+",
     expectedDate: "April 2026",
     status: "Studying",
     notes: "Currently studying for the CompTIA Security+ certification exam."
+    // No specific icon URL for CompTIA, will use default BookOpen
   },
 ];
 
