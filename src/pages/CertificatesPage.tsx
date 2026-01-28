@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CertificatesSection from "@/components/CertificatesSection";
+import UpcomingCertificationsSection from "@/components/UpcomingCertificationsSection"; // Import new component
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Award } from "lucide-react";
 
@@ -103,6 +104,15 @@ const certificates = [
   }
 ];
 
+const upcomingCertificates = [
+  {
+    title: "CompTIA Security+",
+    expectedDate: "April 2026",
+    status: "Studying",
+    notes: "Currently studying for the CompTIA Security+ certification exam."
+  },
+];
+
 const CertificatesPage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -119,6 +129,7 @@ const CertificatesPage = () => {
           </h1>
         </div>
         <CertificatesSection certificates={certificates} />
+        <UpcomingCertificationsSection upcomingCertificates={upcomingCertificates} />
       </main>
       <Footer />
       <ScrollToTopButton />
