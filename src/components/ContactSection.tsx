@@ -9,13 +9,38 @@ import { showSuccess, showError } from "@/utils/toast";
 import { Mail } from 'lucide-react'; // Importing an icon for visual appeal
 
 const ContactSection: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, you would send this data to a backend service.
-    // For now, we'll just show a success toast.
-    showSuccess("Thank you for your message! I'll get back to you soon.");
-    // You might want to clear the form fields here
-    (e.target as HTMLFormElement).reset();
+  // La función handleSubmit ya no es necesaria para el envío directo a Formspree
+  // Formspree manejará el envío directamente a través de los atributos 'action' y 'method' del formulario.
+  // Sin embargo, podemos mantener la lógica del toast para una mejor experiencia de usuario después del envío.
+  const handleFormspreeSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Previene el envío por defecto para manejar el toast
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        showSuccess("¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.");
+        form.reset(); // Limpia el formulario después del envío exitoso
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          showError(data.errors.map((error: any) => error.message).join(", "));
+        } else {
+          showError("Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.");
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      showError("Hubo un problema de red. Por favor, inténtalo de nuevo.");
+    }
   };
 
   return (
@@ -24,12 +49,18 @@ const ContactSection: React.FC = () => {
         <Mail className="h-8 w-8 text-primary mr-3" />
         <h3 className="text-3xl font-bold text-foreground">Get in Touch</h3>
       </div>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form 
+        onSubmit={handleFormspreeSubmit} 
+        action="https://formspree.io/f/yourformid" // ¡IMPORTANTE! Reemplaza 'yourformid' con tu ID de formulario de Formspree
+        method="POST" 
+        className="space-y-6"
+      >
         <div>
           <Label htmlFor="name" className="text-lg font-medium text-foreground mb-2 block">Name</Label>
           <Input 
             id="name" 
             type="text" 
+            name="name" // Añadir el atributo 'name'
             placeholder="Your Name" 
             className="w-full px-4 py-3 rounded-xl border-border focus:border-primary focus:ring-primary text-lg" 
             required 
@@ -40,6 +71,7 @@ const ContactSection: React.FC = () => {
           <Input 
             id="email" 
             type="email" 
+            name="email" // Añadir el atributo 'name'
             placeholder="your.email@example.com" 
             className="w-full px-4 py-3 rounded-xl border-border focus:border-primary focus:ring-primary text-lg" 
             required 
@@ -49,6 +81,7 @@ const ContactSection: React.FC = () => {
           <Label htmlFor="message" className="text-lg font-medium text-foreground mb-2 block">Message</Label>
           <Textarea 
             id="message" 
+            name="message" // Añadir el atributo 'name'
             placeholder="Your message..." 
             rows={5} 
             className="w-full px-4 py-3 rounded-xl border-border focus:border-primary focus:ring-primary text-lg resize-y" 
