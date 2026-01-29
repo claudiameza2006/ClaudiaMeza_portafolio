@@ -37,7 +37,7 @@ const LeadershipSection: React.FC = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0"
             >
-              <img src="https://se-images.campuslabs.com/clink/images/f2744ca0-953b-4478-abee-f07b7d711221630be0-b2e6-418e-be6a-ef936fba0883.png?preset=med-sq" alt="CyberWolves Instagram" className="w-24 h-24 object-cover rounded shadow hover:scale-105 transition-transform duration-200" />
+              <img src="/cyberwolves.jpeg" alt="CyberWolves Instagram" className="w-24 h-24 object-cover rounded shadow hover:scale-105 transition-transform duration-200" />
             </a>
             <div>
               <ul className="list-disc list-inside text-foreground space-y-1 pl-4">
