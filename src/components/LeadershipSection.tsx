@@ -31,14 +31,7 @@ const LeadershipSection: React.FC = () => {
             <span className="text-lg text-foreground font-semibold">May 2025 - Present</span>
           </CardHeader>
           <CardContent className="space-y-4 flex flex-row items-center gap-6">
-            <a
-              href="https://www.instagram.com/cyberwolves_au/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0"
-            >
-              <img src="/cyberwolves.jpeg" alt="CyberWolves Instagram" className="w-24 h-24 object-cover rounded shadow hover:scale-105 transition-transform duration-200" />
-            </a>
+            {/* Image removed as requested */}
             <div>
               <ul className="list-disc list-inside text-foreground space-y-1 pl-4">
                 <li>Led a team of 11 members, organizing collaborative meetings, workshops, and fundraising initiatives.</li>
