@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background to-card opacity-50 rounded-2xl"></div>
       <div className="relative z-10 animate-fadeIn">
         <Avatar className="w-72 h-72 mx-auto mb-10 border-4 border-primary shadow-lg ring-4 ring-secondary ring-offset-4 ring-offset-white animate-pulse-ring">
-          <AvatarImage src="/Claudia.jpeg" alt="Your Profile Picture" />
+          <AvatarImage src="https://media.licdn.com/dms/image/v2/D4E35AQHTFnjsa7GkfQ/profile-framedphoto-shrink_400_400/B4EZuWNjolLUAc-/0/1767751695130?e=1770253200&v=beta&t=mqyydFB3YFiGGU5l_I-cl6Dgire-oKnHcc6TiKTdHhM" alt="Your Profile Picture" />
           <AvatarFallback className="bg-muted text-primary text-7xl font-bold">CM</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground mb-4 leading-tight">
