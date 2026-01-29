@@ -23,8 +23,11 @@ const HeroSection: React.FC = () => {
           <br />
           Computer Science Major & Business Management Minor at Alvernia University
         </h2>
-        <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-8">
+        <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
           Building secure, automated, and resilient systems across cloud, DevOps, and enterprise environments.
+        </p>
+        <p className="text-md text-muted-foreground mb-8">
+          Willing to relocate.
         </p>
         <div className="flex justify-center space-x-4">
           <Button asChild className="rounded-full px-6 py-3 bg-primary hover:bg-primary/90 text-white text-lg font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-1">
